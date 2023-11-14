@@ -26,12 +26,13 @@ const parser = new Parser({
 
   // 최신 5개의 글의 제목과 링크를 가져온 후 text에 추가
   for (let i = 0; i < 5; i++) {
-    const { title, link } = feed.items[i];
+    const { title, link, pubDate } = feed.items[i];
     console.log(`${i + 1}번째 게시물`);
     console.log(`추가될 제목: ${title}`);
     console.log(`추가될 링크: ${link}`);
     text += `
-    ${i + 1}. <a href=${link}>${title}</a></br><br><br>
+    ${i + 1}. <a href=${link}>${title}</a></br>
+    게시한 날짜 ${pubDate}</br></br>
 
     `;
   }
