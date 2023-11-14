@@ -1,7 +1,17 @@
 import { writeFileSync } from "node:fs";
 import Parser from "rss-parser";
 
-let text = `##원하는 제목
+let text = `
+### Hi there 👋
+[![kkoon9's github stats](https://github-readme-stats.vercel.app/api?username=kkoon9&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
+
+[![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=rndrnjs2003)](https://solved.ac/rndrnjs2003)
+## Pronouns
+**남 궁 권 (Nam Koong Kwon)**
+- [Blog](https://kkoon9.tistory.com)
+- [Email](mailto:rndrnjs2003@naver.com)
+
+## 블로그 최신글
 `;
 // rss-parser 생성
 const parser = new Parser({
@@ -20,7 +30,7 @@ const parser = new Parser({
     console.log(`${i + 1}번째 게시물`);
     console.log(`추가될 제목: ${title}`);
     console.log(`추가될 링크: ${link}`);
-    text += `<a href=${link}>${title}</a></br>`;
+    text += `<a href=${link}>${title}</a></br><br>`;
   }
 
   // README.md 파일 작성
