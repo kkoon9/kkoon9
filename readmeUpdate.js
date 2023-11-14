@@ -30,7 +30,10 @@ const parser = new Parser({
     console.log(`${i + 1}번째 게시물`);
     console.log(`추가될 제목: ${title}`);
     console.log(`추가될 링크: ${link}`);
-    text += `<a href=${link}>${title}</a></br><br>`;
+    text += `
+    1. <a href=${link}>${title}</a></br><br><br>
+    
+    `;
   }
 
   // README.md 파일 작성
