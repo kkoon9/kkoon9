@@ -31,8 +31,8 @@ const parser = new Parser({
     console.log(`추가될 제목: ${title}`);
     console.log(`추가될 링크: ${link}`);
     text += `
-    1. <a href=${link}>${title}</a></br><br><br>
-    
+    ${i + 1}. <a href=${link}>${title}</a></br><br><br>
+
     `;
   }
 
