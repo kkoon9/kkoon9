@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  },
+  "name": "kkoon9",
+  "description": "[![kkoon9's github stats](https://github-readme-stats.vercel.app/api?username=kkoon9&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)",
+  "version": "1.0.0",
+  "main": "readmeUpdate.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node readmeUpdate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkoon9/kkoon9.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkoon9/kkoon9/issues"
+  },
+  "homepage": "https://github.com/kkoon9/kkoon9#readme"
+}
