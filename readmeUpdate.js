@@ -1,6 +1,11 @@
-import { writeFileSync } from "node:fs";
-import dayjs from "dayjs";
-import Parser from "rss-parser";
+const fs = require("fs");
+const dayjs = require("dayjs");
+const Parser = require("rss-parser");
+const timezone = require("dayjs/plugin/timezone");
+const utc = require("dayjs/plugin/utc");
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault("Asia/Seoul");
 
 let text = `
 ### Hi there 👋
@@ -38,7 +43,7 @@ const parser = new Parser({
   }
 
   // README.md 파일 작성
-  writeFileSync("README.md", text, "utf8", (e) => {
+  fs.writeFileSync("README.md", text, "utf8", (e) => {
     console.log(e);
   });
 
