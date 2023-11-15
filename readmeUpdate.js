@@ -1,4 +1,5 @@
 import { writeFileSync } from "node:fs";
+import dayjs from "dayjs";
 import Parser from "rss-parser";
 
 let text = `
@@ -13,7 +14,7 @@ let text = `
 
 ## 블로그 최신글
 `;
-// rss-parser 생성
+
 const parser = new Parser({
   headers: {
     Accept: "application/rss+xml, application/xml, text/xml; q=0.1",
@@ -30,7 +31,10 @@ const parser = new Parser({
     console.log(`${i + 1}번째 게시물`);
     console.log(`추가될 제목: ${title}`);
     console.log(`추가될 링크: ${link}`);
-    text += `<a href=${link}>${title}</a></br></br>`;
+    console.log(`추가될 날짜: ${dayjs(pubDate).format("YYYY.MM.DD HH:mm:ss")}`);
+    const date = dayjs(pubDate).format("YYYY.MM.DD HH:mm:ss");
+    text += `<a href=${link}>${title}</a></br>`;
+    text += `게시일자 : ${date}</br></br>`;
   }
 
   // README.md 파일 작성
