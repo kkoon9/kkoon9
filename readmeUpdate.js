@@ -36,8 +36,8 @@ const parser = new Parser({
     console.log(`${i + 1}번째 게시물`);
     console.log(`추가될 제목: ${title}`);
     console.log(`추가될 링크: ${link}`);
-    console.log(`추가될 날짜: ${dayjs(pubDate).format("YYYY.MM.DD HH:mm:ss")}`);
-    const date = dayjs(pubDate).format("YYYY.MM.DD HH:mm:ss");
+
+    const date = dayjs(pubDate).add(9, "hours").format("YYYY.MM.DD HH:mm:ss");
     text += `<a href=${link}>${title}</a></br>`;
     text += `게시일자 : ${date}</br></br>`;
   }
