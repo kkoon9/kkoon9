@@ -17,9 +17,9 @@ jobs:
         with:
           node-version: 16
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Update README
-        run: npm start
+        run: yarn start
       - name: Commit README
         run: |
           git add .
